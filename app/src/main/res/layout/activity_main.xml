@@ -7,35 +7,68 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/mertkadakal_yazisi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mert"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.541" />
+    <!-- Yatay Alan (LinearLayout) -->
 
     <Button
-        android:id="@+id/buton1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="272dp"
-        android:background="@android:drawable/button_onoff_indicator_off"
+        android:id="@+id/sinif1"
+        android:layout_width="248dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="184dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
         android:shadowColor="#D09898"
-        android:text="Buton1"
+        android:text="Sınıf1"
         android:textColorLink="#7A2121"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="#6B4B4B"
         app:strokeColor="#000000" />
 
-    <!-- Yatay Alan (LinearLayout) -->
+    <Button
+        android:id="@+id/sinif2"
+        android:layout_width="248dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="284dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:shadowColor="#D09898"
+        android:text="Sınıf2"
+        android:textColorLink="#7A2121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#6B4B4B"
+        app:strokeColor="#000000" />
+
+    <Button
+        android:id="@+id/sinif3"
+        android:layout_width="248dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="384dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:shadowColor="#D09898"
+        android:text="Sınıf3"
+        android:textColorLink="#7A2121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#6B4B4B"
+        app:strokeColor="#000000" />
+
+    <Button
+        android:id="@+id/sinif4"
+        android:layout_width="248dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="484dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:shadowColor="#D09898"
+        android:text="Sınıf4"
+        android:textColorLink="#7A2121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#6B4B4B"
+        app:strokeColor="#000000" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,10 +82,32 @@
             android:id="@+id/header_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Uygulama"
+            android:text="Öğrenci Seçme Uygulaması"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/sinifSeciniz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="592dp"
+        android:text="Sınıf seçiniz"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/backToMain"
+        android:layout_width="63dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="664dp"
+        android:layout_marginEnd="300dp"
+        android:background="@android:drawable/ic_menu_revert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
