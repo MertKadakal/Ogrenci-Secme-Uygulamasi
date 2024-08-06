@@ -37,7 +37,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="#6B4B4B"
-        app:strokeColor="#000000" />
+        app:strokeColor="#000000"
+        tools:visibility="visible" />
 
     <Button
         android:id="@+id/sinif3"
@@ -70,12 +71,13 @@
         app:strokeColor="#000000" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
         android:background="@android:color/holo_blue_light"
-        android:padding="16dp"
-        android:layout_alignParentTop="true">
+        android:orientation="horizontal"
+        android:padding="16dp">
 
         <!-- Başlık Metni (TextView) -->
         <TextView
@@ -108,6 +110,29 @@
         android:layout_marginEnd="300dp"
         android:background="@android:drawable/ic_menu_revert"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/ogr_sec"
+        android:layout_width="262dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="496dp"
+        android:text="Öğrenci Seç"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/secilen_ogr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="312dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
