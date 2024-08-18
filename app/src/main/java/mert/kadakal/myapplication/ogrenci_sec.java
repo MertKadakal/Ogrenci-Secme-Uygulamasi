@@ -14,6 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class ogrenci_sec extends AppCompatActivity {
@@ -28,6 +30,8 @@ public class ogrenci_sec extends AppCompatActivity {
 
     private ArrayList<String> sinif1_ogr = new ArrayList<>(Arrays.asList("Öğrenci 1", "Öğrenci 2", "Öğrenci 3", "Öğrenci 4", "Öğrenci 5"));
     private ArrayList<String> sinif2_ogr = new ArrayList<>(Arrays.asList("Öğrenci 6", "Öğrenci 7", "Öğrenci 8", "Öğrenci 9", "Öğrenci 10"));
+    private ArrayList<String> sinif3_ogr = new ArrayList<>(Arrays.asList("Öğrenci 11", "Öğrenci 12", "Öğrenci 13", "Öğrenci 14", "Öğrenci 15"));
+    private ArrayList<String> sinif4_ogr = new ArrayList<>(Arrays.asList("Öğrenci 16", "Öğrenci 17", "Öğrenci 18", "Öğrenci 19", "Öğrenci 20"));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +52,10 @@ public class ogrenci_sec extends AppCompatActivity {
         snfNo.setText(snf);
         ogr_sec_buton = (Button) findViewById(R.id.ogr_sec_buton);
 
-        ArrayList<ArrayList<String>> siniflar = new ArrayList<>();
-        siniflar.add(sinif1_ogr);
-        siniflar.add(sinif2_ogr);
-
-
+        Map<String, ArrayList<String>> siniflar = Map.of("sinif1", sinif1_ogr,
+                "sinif2", sinif2_ogr,
+                "sinif3", sinif3_ogr,
+                "sinif4", sinif4_ogr);
 
         backtomain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,13 +66,8 @@ public class ogrenci_sec extends AppCompatActivity {
             }
         });
 
+        ogr_list = siniflar.get(snf);
 
-        if (snf.equals("sinif1")) {
-            ogr_list = siniflar.get(0);
-        }
-        else if (snf.equals("sinif2")) {
-            ogr_list = siniflar.get(1);
-        }
         ogr_sec_buton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,5 +82,16 @@ public class ogrenci_sec extends AppCompatActivity {
                 }
             }
         });
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        // Butona basıldığında yapılacak işlemler buraya yazılır
+        Intent intent = new Intent(ogrenci_sec.this, MainActivityJava.class);
+        startActivity(intent);
+
     }
 }

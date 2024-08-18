@@ -21,9 +21,6 @@ public class MainActivityJava extends AppCompatActivity {
     private Button sinif3;
     private Button sinif4;
 
-    private TextView snfScnz;
-
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,9 +30,7 @@ public class MainActivityJava extends AppCompatActivity {
         sinif2 = (Button) findViewById(R.id.sinif2);
         sinif3 = (Button) findViewById(R.id.sinif3);
         sinif4 = (Button) findViewById(R.id.sinif4);
-
-        snfScnz = (TextView) findViewById(R.id.sinifSeciniz);
-
+        
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,5 +44,10 @@ public class MainActivityJava extends AppCompatActivity {
         sinif2.setOnClickListener(listener);
         sinif3.setOnClickListener(listener);
         sinif4.setOnClickListener(listener);
+    }
+
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
     }
 }
