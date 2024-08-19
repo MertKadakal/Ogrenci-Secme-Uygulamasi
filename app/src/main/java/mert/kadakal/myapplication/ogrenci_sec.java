@@ -44,7 +44,6 @@ public class ogrenci_sec extends AppCompatActivity {
             return insets;
         });
 
-        backtomain = (Button) findViewById(R.id.backToMain);
         snfNo = (TextView) findViewById(R.id.Sınıf_no);
         secilen_ogr = (TextView) findViewById(R.id.secilen_ogr);
         Intent gelenIntent = getIntent();
@@ -56,15 +55,6 @@ public class ogrenci_sec extends AppCompatActivity {
                 "sinif2", sinif2_ogr,
                 "sinif3", sinif3_ogr,
                 "sinif4", sinif4_ogr);
-
-        backtomain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Butona basıldığında yapılacak işlemler buraya yazılır
-                Intent intent = new Intent(ogrenci_sec.this, MainActivityJava.class);
-                startActivity(intent);
-            }
-        });
 
         ogr_list = siniflar.get(snf);
 
@@ -82,8 +72,6 @@ public class ogrenci_sec extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     @Override
